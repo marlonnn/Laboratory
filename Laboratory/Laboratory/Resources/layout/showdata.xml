@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    android:id="@+id/showDataLayout"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:text="辅助生殖实验室综合监控系统"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0000ff"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:id="@+id/txtTitle" />
+    <TextView
+        android:text="环境数据"
+        android:layout_below="@id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:id="@+id/txtSubTitle" />
+        <LinearLayout
+            android:id="@+id/functionLayout"
+            android:layout_below="@id/txtSubTitle"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="30px"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="CO2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnCO2" />
+            <Button
+                android:text="O2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnO2" />
+            <Button
+                android:text="温度"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnTemperature" />
+            <Button
+                android:text="湿度"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnHumidity" />
+            <Button
+                android:text="VOC"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnVOC" />
+        </LinearLayout>
+        <microcharts.droid.ChartView
+            android:id="@+id/chartView"
+            android:layout_below="@id/functionLayout"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="30px"
+            android:layout_width="match_parent"
+            android:layout_height="260dp" />
+        <LinearLayout
+            android:layout_below="@id/chartView"
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chartTypeLayout" >
+            <Button
+                android:text="当日曲线"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDayChart" />
+            <Button
+                android:text="周曲线"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnWeekChart" />
+            <Button
+                android:text="月曲线"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnMonthChart" />
+        </LinearLayout>
+        <TextView
+            android:layout_below="@id/chartTypeLayout"
+            android:text="传感器选择"
+            android:textColor="#0000ff"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="60px"
+            android:id="@+id/txtSensorChooseTitle" />
+        <LinearLayout
+            android:layout_below="@id/txtSensorChooseTitle"
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="60px"
+            android:layout_marginRight="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sensorChooseLayout1" >
+            <Button
+                android:text="设备1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDev1" />
+            <Button
+                android:text="设备2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDev2" />
+            <Button
+                android:text="设备3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDev3" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/sensorChooseLayout1"
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sensorChooseLayout2" >
+            <Button
+                android:text="设备4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDev1" />
+            <Button
+                android:text="设备5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDev2" />
+            <Button
+                android:text="设备6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1"
+                android:id="@+id/btnDev3" />
+        </LinearLayout>
+</RelativeLayout>

@@ -6,4 +6,9 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+       android:id="@+id/bluetooth_settings"
+       android:icon="@mipmap/bluetooth_setting_24dp"
+       android:showAsAction="ifRoom"
+       android:title="bluetooth setting" />
 </menu>
